@@ -26,16 +26,30 @@ const hoursEl = document.getElementById("hours");
 const minutesEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
 
-
 const interval = setInterval(() => {
-    const timeLeft = calculateTimeLeft(targetDate);
-  
-    daysEl.textContent = String(timeLeft.days).padStart(2, "0");
-    hoursEl.textContent = String(timeLeft.hours).padStart(2, "0");
-    minutesEl.textContent = String(timeLeft.minutes).padStart(2, "0");
-    secondsEl.textContent = String(timeLeft.seconds).padStart(2, "0");
-  
-    if (timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0) {
-      clearInterval(interval);
-    }
-  }, 1000);
+  const timeLeft = calculateTimeLeft(targetDate);
+
+  daysEl.textContent = String(timeLeft.days).padStart(2, "0");
+  hoursEl.textContent = String(timeLeft.hours).padStart(2, "0");
+  minutesEl.textContent = String(timeLeft.minutes).padStart(2, "0");
+  secondsEl.textContent = String(timeLeft.seconds).padStart(2, "0");
+
+  if (
+    timeLeft.days === 0 &&
+    timeLeft.hours === 0 &&
+    timeLeft.minutes === 0 &&
+    timeLeft.seconds === 0
+  ) {
+    clearInterval(interval);
+  }
+}, 1000);
+
+const btn = document.getElementById('arrowDown');
+
+btn.addEventListener('click', () => {
+  window.scrollBy({
+    top: window.innerHeight,
+    left: 0,
+    behavior: 'smooth'
+  });
+});

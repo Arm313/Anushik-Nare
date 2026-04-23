@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: "Armenia";
+  src: url(./font/BraindAmanor.otf);
+}
+@font-face {
+  font-family: "Armenia2";
+  src: url(./font/ArTarumianBarakU-Regular.ttf);
+}
+@font-face {
+  font-family: "Armenia3";
+  src: url(./font/ArmeniapediaJhapaven.ttf);
+}
+/* 616c41 */
+body {
+  font-family: "Armenia";
+  color: #616c41;
+  height: 100vh;
+  background: #e9e9e9;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  text-align: center;
+  padding: 0 30px;
+}
+
+.header {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.title {
+ color: #616c41;
+  text-align: center;
+  font-size: clamp(1rem, 13vw, 5rem);
+}
+
+.angels {
+  display: flex;
+  gap: 10px;
+   width: 200px;
+  height: 200px;
+}
+
+
+.angels img {
+  width: 100%;
+  height: 100%;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+.name {
+ color: #616c41;
+  font-size: clamp(2rem, 8vw, 3rem);
+}
+
+.arrowDown {
+  margin-top: 20px;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  background: none;
+  border: none;
+  color: #616c41;
+  animation: arrow 1s infinite alternate ease-in-out;
+  cursor: pointer;
+}
+
+section {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 100px;
+}
+.text {
+  font-family: "Armenia2";
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 2rem);
+}
+.line {
+  width: 200px;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #616c4152;
+}
+
+.date {
+  font-size: clamp(2rem, 15vw, 5rem);
+  color: rgb(173, 99, 62);
+}
+
+.message {
+   font-size: clamp(2rem, 10vw, 5rem);
+  color: rgb(173, 99, 62);
+}
+
+.date .year {
+  font-size: clamp(2rem, 10vw, 5rem);
+}
+
+.place {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-size: clamp(2rem, 10vw, 5rem);
+}
+.place .time {
+  font-size: clamp(2rem, 14vw, 5rem);
+  color: rgb(173, 99, 62);
+}
+.place .city {
+  font-family: "Armenia2";
+  font-weight: 700;
+}
+.place .place-img {
+  max-width: 600px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 20px;
+  overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    position: relative;
+}
+
+.bg-opacity {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.place .place-img img {
+  width: 100%;
+  height: 100%;
+}
+.how-to-reach {
+  background: none;
+  padding: 12px 24px;
+ color: #616c41;
+  font-size: 1.7rem;
+  border-radius: 20px;
+  border: 2px solid #616c41;
+}
+
+@keyframes arrow {
+  from {
+    transform: translateY(-7px);
+  }
+  to {
+    transform: translateY(7px);
+  }
+}
+
+#countdown {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+#countdown p {
+  font-weight: 700;
+  font-size: clamp(3rem, -1.5rem + 10vw, 5rem);
+}
+
+#countdown span {
+  font-size: clamp(2rem, -1.5rem + 10vw, 3rem);
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 950px) {
+  .header {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 476px) {
+  .photo {
+    width: 300px;
+    height: 300px;
+  }
+}
